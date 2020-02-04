@@ -1,0 +1,107 @@
+Metadata-Version: 2.1
+Name: simplesmtp
+Version: 0.0.3
+Summary: A very simple class to send e-mails using the SMTP Python Lib
+Home-page: https://github.com/andidevel/simplesmtp
+Author: Anderson R. Livramento
+Author-email: andi.devel@gmail.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+
+SimpleSMTP
+==========
+
+A very simple class to send e-mails using the Python SMTP standard lib.
+
+Usage
+-----
+
+.. code:: python
+
+    from simplesmtp import SimpleSMTP
+
+    mail = SimpleSMTP(
+        host='mail.host',
+        username='user@mail.host',
+        passw='password',
+        from_email='You <youremail@mail.host>'
+    )
+    mail.send(to_email='email@example.com', subject='Hello', email_message='World')
+
+    # Changing default from_email
+
+    mail.send(
+        from_email='Another From <email@example.com>',
+        to_email='email@example.com',
+        subject='Hello',
+        email_message='World'
+    )
+
+    # Sending to more than one recipient
+
+    mail.send(
+        to_email='email1@example.com, email2@example.com',
+        subject='Hello',
+        email_message='World'
+    )
+
+    # Attachments
+
+    mail.send(
+        to_email='email1@example.com, email2@example.com',
+        subject='Hello',
+        email_message='World',
+        attachments=[
+            {
+                'file': '/path/to/real/file',
+                'filename': 'the name that you want'
+            }
+        ]
+    )
+
+**Using SSL**
+
+.. code:: python
+
+    from simplesmtp import SimpleSMTP
+
+    mail = SimpleSMTP(
+        host='mail.host',
+        username='user@mail.host',
+        passw='password',
+        from_email='You <youremail@mail.host>',
+        port=465,
+        use_ssl=True
+    )
+    mail.send(to_email='email@example.com', subject='Hello', email_message='World')
+
+**HTML messages**
+
+.. code:: python
+
+    from simplesmtp import SimpleSMTP
+
+    mail = SimpleSMTP(
+        host='mail.host',
+        username='user@mail.host',
+        passw='password',
+        from_email='You <youremail@mail.host>'
+    )
+    mail.send(
+        to_email='email@example.com',
+        subject='Hello',
+        email_message='<html> HTML source with optional embedded images ... </html>',
+        msg_type='html'
+    )
+
+

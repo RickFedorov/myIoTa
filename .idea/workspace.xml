@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c089351f-6a3f-430f-bba7-e5c11dd586da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/paho.mqtt.python" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="myIoTa" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\lords\PycharmProjects\myIoTa\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WlOTRxJ6YHaI6ZLJMf1EYcjiiY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lords\PycharmProjects\myIoTa\lib" />
+      <recent name="C:\Users\lords\PycharmProjects\myIoTa" />
+      <recent name="C:\Users\lords\PycharmProjects\myIoTa\old" />
+      <recent name="C:\Users\mxs6549\PycharmProjects\myIoTa\logs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mxs6549\PycharmProjects\myIoTa" />
+      <recent name="C:\Users\lords\PycharmProjects\myIoTa" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.start">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="myIoTa" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\lords\PycharmProjects\myIoTa\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/connect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="connect" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="myIoTa" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/connect.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="mqqt_test" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="myIoTa" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\lords\PycharmProjects\myIoTa\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/mqqt_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="myIoTa" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\lords\PycharmProjects\myIoTa\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\lords\PycharmProjects\myIoTa\start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.connect" />
+      <item itemvalue="Python.mqqt_test" />
+      <item itemvalue="Python.start" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c089351f-6a3f-430f-bba7-e5c11dd586da" name="Default Changelist" comment="" />
+      <created>1579720721963</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579720721963</updated>
+    </task>
+    <task id="LOCAL-00001" summary="basic works">
+      <created>1579978451697</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579978451697</updated>
+    </task>
+    <task id="LOCAL-00002" summary="basic design">
+      <created>1580075284536</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580075284536</updated>
+    </task>
+    <task id="LOCAL-00003" summary="email mqtt">
+      <created>1580849729035</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580849729035</updated>
+    </task>
+    <task id="LOCAL-00004" summary="email mqtt - exception">
+      <created>1580850026936</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1580850026936</updated>
+    </task>
+    <task id="LOCAL-00005" summary="email mqtt - exception">
+      <created>1580850975333</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580850975333</updated>
+    </task>
+    <task id="LOCAL-00006" summary="email mqtt - exception">
+      <created>1580851119980</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580851119980</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_TABS">
+      <set>
+        <option value="1" />
+      </set>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="basic works" />
+    <MESSAGE value="basic design" />
+    <MESSAGE value="email mqtt" />
+    <MESSAGE value="email mqtt - exception" />
+    <option name="LAST_COMMIT_MESSAGE" value="email mqtt - exception" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="28" key="#Notifications" timestamp="1579977896773">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="28" key="#Notifications/0.0.1366.738@0.0.1366.738" timestamp="1579977896773" />
+    <state x="203" y="32" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580841820861">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="203" y="32" width="1092" height="706" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.738@0.0.1366.738" timestamp="1580841820861" />
+    <state x="258" y="40" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820144237" />
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1580851227965">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.738@0.0.1366.738" timestamp="1580851227965" />
+    <state width="722" height="438" key="DebuggerActiveHint" timestamp="1580848984956">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="722" height="438" key="DebuggerActiveHint/0.0.1366.738@0.0.1366.738" timestamp="1580848984956" />
+    <state x="463" y="134" key="FileChooserDialogImpl" timestamp="1580841731964">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="134" key="FileChooserDialogImpl/0.0.1366.738@0.0.1366.738" timestamp="1580841731964" />
+    <state x="589" y="170" key="FileChooserDialogImpl/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820140872" />
+    <state x="565" y="263" width="260" height="211" key="Github.ShareDialog" timestamp="1579816284184">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="565" y="263" width="260" height="211" key="Github.ShareDialog/0.0.1366.738@0.0.1366.738" timestamp="1579816284184" />
+    <state x="502" y="75" key="Github.UntrackedFilesDialog" timestamp="1579816299002">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="502" y="75" key="Github.UntrackedFilesDialog/0.0.1366.738@0.0.1366.738" timestamp="1579816299002" />
+    <state width="1345" height="149" key="GridCell.Tab.0.bottom" timestamp="1580851185594">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="149" key="GridCell.Tab.0.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580851185594" />
+    <state width="1718" height="308" key="GridCell.Tab.0.bottom/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820487721" />
+    <state width="1345" height="149" key="GridCell.Tab.0.center" timestamp="1580851185594">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="149" key="GridCell.Tab.0.center/0.0.1366.738@0.0.1366.738" timestamp="1580851185594" />
+    <state width="1718" height="308" key="GridCell.Tab.0.center/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820487721" />
+    <state width="1345" height="149" key="GridCell.Tab.0.left" timestamp="1580851185594">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="149" key="GridCell.Tab.0.left/0.0.1366.738@0.0.1366.738" timestamp="1580851185594" />
+    <state width="1718" height="308" key="GridCell.Tab.0.left/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820487721" />
+    <state width="1345" height="149" key="GridCell.Tab.0.right" timestamp="1580851185594">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="149" key="GridCell.Tab.0.right/0.0.1366.738@0.0.1366.738" timestamp="1580851185594" />
+    <state width="1718" height="308" key="GridCell.Tab.0.right/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820487721" />
+    <state width="1345" height="189" key="GridCell.Tab.1.bottom" timestamp="1580849563572">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="189" key="GridCell.Tab.1.bottom/0.0.1366.738@0.0.1366.738" timestamp="1580849563572" />
+    <state width="1718" height="308" key="GridCell.Tab.1.bottom/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820487721" />
+    <state width="1345" height="189" key="GridCell.Tab.1.center" timestamp="1580849563572">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="189" key="GridCell.Tab.1.center/0.0.1366.738@0.0.1366.738" timestamp="1580849563572" />
+    <state width="1718" height="308" key="GridCell.Tab.1.center/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820487721" />
+    <state width="1345" height="189" key="GridCell.Tab.1.left" timestamp="1580849563572">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="189" key="GridCell.Tab.1.left/0.0.1366.738@0.0.1366.738" timestamp="1580849563572" />
+    <state width="1718" height="308" key="GridCell.Tab.1.left/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820487721" />
+    <state width="1345" height="189" key="GridCell.Tab.1.right" timestamp="1580849563572">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="189" key="GridCell.Tab.1.right/0.0.1366.738@0.0.1366.738" timestamp="1580849563572" />
+    <state width="1718" height="308" key="GridCell.Tab.1.right/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820487721" />
+    <state x="184" y="12" key="SettingsEditor" timestamp="1580848669329">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="184" y="12" key="SettingsEditor/0.0.1366.738@0.0.1366.738" timestamp="1580848669329" />
+    <state x="586" y="191" key="SettingsEditor/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580820051863" />
+    <state x="275" y="103" key="Vcs.Push.Dialog.v2" timestamp="1580851121722">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="275" y="103" key="Vcs.Push.Dialog.v2/0.0.1366.738@0.0.1366.738" timestamp="1580851121722" />
+    <state x="92" y="92" width="1182" height="554" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1580840949173">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1580840949173" />
+    <state x="92" y="92" width="1182" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1579985642886">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="92" y="92" width="1182" height="554" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.738@0.0.1366.738" timestamp="1579985642886" />
+    <state x="482" y="247" key="com.intellij.ide.util.TipDialog" timestamp="1580822489606">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="379" y="194" key="com.intellij.ide.util.TipDialog/0.0.1366.738@0.0.1366.738" timestamp="1580764335156" />
+    <state x="482" y="247" key="com.intellij.ide.util.TipDialog/1920.142.1739.939/0.0.1739.939@0.0.1739.939" timestamp="1580822489606" />
+    <state x="412" y="161" key="git4idea.merge.GitPullDialog" timestamp="1580840890278">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="412" y="161" key="git4idea.merge.GitPullDialog/0.0.1366.738@0.0.1366.738" timestamp="1580840890278" />
+    <state x="436" y="218" key="git4idea.ui.GitUnstashDialog" timestamp="1580840915606">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="436" y="218" key="git4idea.ui.GitUnstashDialog/0.0.1366.738@0.0.1366.738" timestamp="1580840915606" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/simplesmtp/util.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/venv/Lib/site-packages/simplesmtp/core.py</url>
+          <line>60</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="regexState">
+    <option name="map">
+      <map>
+        <entry key="flags" value="0" />
+        <entry key="mode" value="0" />
+        <entry key="regex" value="(19||20)\d\d([- /.])(0[1-9]||1[012])\2(0[1-9]||[12][0-9]||3[01])" />
+        <entry key="text" value="1900-01-01 2007/08/13 1900.01.01 1900 01 01 1900-01.01 1900 13 01 1900 02 31" />
+      </map>
+    </option>
+  </component>
+</project>
