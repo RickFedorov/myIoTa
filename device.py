@@ -5,7 +5,10 @@ import ast
 from lib import schedule
 from datetime import datetime
 import time
-from logs.logger import logger
+
+from logs.logger import get_my_logger
+
+logger = get_my_logger(__name__)
 
 
 class Device:
@@ -75,9 +78,8 @@ class RemoteControler(Device):
                 pass
 
         except KeyError:
-            print("Exception in action {}".format(self.name))
+            logger.debug("Exception in action {}".format(self.name))
         except Exception as inst:
-            print("Exception in action {}".format(self.name))
             logger.exception("Exception in action {}".format(self.name))
 
 
@@ -98,17 +100,16 @@ class PowerOutlet(Device):
             else:
                 pass
         except KeyError:
-            print("Exception in action {}".format(self.name))
+            logger.info("Exception in action {}".format(self.name))
         except Exception as inst:
-            print("Exception in action {}".format(self.name))
             logger.exception("Exception in action {}".format(self.name))
 
     def turn_off(self):
-        print("Turning off: " + datetime.now().strftime("%H:%M:%S"))
+        logger.info("Turning off: " + datetime.now().strftime("%H:%M:%S"))
         self.client.publish(self.state_topic + "/set", "OFF")
 
     def turn_on(self):
-        print("Turning on: " + datetime.now().strftime("%H:%M:%S"))
+        logger.info("Turning on: " + datetime.now().strftime("%H:%M:%S"))
         self.client.publish(self.state_topic + "/set", "ON")
 
     def restart(self):
@@ -153,7 +154,7 @@ class MotionSensorHall(Device):
                 pass
 
         except Exception as inst:
-            print("Exeption in motion {}".format(self.name))
+            logger.exception("Exeption in motion {}".format(self.name))
 
     def send_command(self, command):
         for device in self.sub_devices:

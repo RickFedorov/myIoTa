@@ -1,9 +1,12 @@
 from psw import mail_psw, mail_user, mail_adm
 from imbox import Imbox
 import json
-from logs.logger import logger
 import time
 from simplesmtp import SimpleSMTP
+
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class Email2Mqtt():
@@ -55,7 +58,6 @@ class Mqtt2Email():
             )
         except:
             logger.exception("Simple SMTP - Exception occurred...")
-
 
     def send_mail(self, subject, contents):
         try:

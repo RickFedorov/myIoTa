@@ -3,6 +3,9 @@ import paho.mqtt.client as mqtt
 from device import Device, RemoteControler, PowerOutlet, LighBulb, MotionSensorHall
 from connect import Email2Mqtt, Mqtt2Email
 
+from logs.logger import get_my_logger
+logger = get_my_logger(__name__)
+
 class IOTA(mqtt.Client):
 
     def __init__(self):
@@ -15,10 +18,10 @@ class IOTA(mqtt.Client):
         self.email = Mqtt2Email(self)
 
     def on_connect(self, mqttc, obj, flags, rc):
-        print("rc: " + str(rc))
+        logger.info("Connect: " + str(rc))
 
     def on_message(self, mqttc, obj, msg):
-        print(msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
+        logger.debug("Msg: " + msg.topic + " " + str(msg.qos) + " " + str(msg.payload))
         self.process_message(msg)
         if msg.topic == "$SYS/broker/uptime":
             self.publish("Test/test3", "OK")
@@ -29,13 +32,13 @@ class IOTA(mqtt.Client):
             device.on_message(msg)
 
     def on_publish(self, mqttc, obj, mid):
-        print("mid: " + str(mid))
+        logger.debug("Mid: " + str(mid))
 
     def on_subscribe(self, mqttc, obj, mid, granted_qos):
-        print("Subscribed: " + str(mid) + " " + str(granted_qos))
+        logger.debug("Sub: " + str(mid) + " " + str(granted_qos))
 
     def on_log(self, mqttc, obj, level, string):
-        print(string)
+        logger.debug("Log: " + string)
 
     def init_devices(self):
         self.devices.append(RemoteControler("remote_control1", self))
@@ -55,7 +58,7 @@ class IOTA(mqtt.Client):
 
     def run(self):
         self.connect(self.server, self.port, self.keepalive)
-        self.subscribe("$SYS/broker/uptime")
+        #self.subscribe("$SYS/broker/uptime")
         self.init_devices()
         self.init_email()
 
