@@ -29,14 +29,14 @@ class Email2Mqtt():
                     try:
                         self.client.publish(topic, json.dumps(payload))
                     except:
-                        logger.exception(" {} - Exception occurred...".format(message.subject))
+                        logger.exception(" {} - Exception in message loop.".format(message.subject))
                         continue
 
                     imbox.mark_seen(uid)  # command execuded
                 else:
                     logger.info("No new message")
         except:
-            logger.exception(" {} - Exception occurred...".format(mail_user))
+            logger.exception(" {} - Exception IMAP connection failed.".format(mail_user))
 
     def run(self, name):
         while True:
@@ -57,10 +57,10 @@ class Mqtt2Email():
                 from_email=mail_user
             )
         except:
-            logger.exception("Simple SMTP - Exception occurred...")
+            logger.exception("Simple SMTP - Connection failed.")
 
     def send_mail(self, subject, contents):
         try:
             self.email.send(to_email=mail_adm, subject=subject, email_message=contents)
         except:
-            logger.exception(" {} - Exception occurred...".format(subject))
+            logger.exception(" {} - Send mail failed.".format(subject))

@@ -5,6 +5,7 @@ import ast
 from lib import schedule
 from datetime import datetime
 import time
+import threading
 
 from logs.logger import get_my_logger
 
@@ -30,6 +31,13 @@ class Device:
         self.payload = []
         self.battery = 0
 
+        self.sub_devices = []
+        if "sub_devices" in kwargs:
+            if type(kwargs["sub_devices"]) is list:
+                self.sub_devices = kwargs["sub_devices"]
+            else:
+                raise Exception("sub_devices must be a list.")
+
         self.on_init(**kwargs)
 
     # method will be used by child on time of init
@@ -49,7 +57,9 @@ class Device:
 
     # method will be used by child to do its action
     def do_action(self):
-        pass
+        if "battery" in self.payload:
+            self.battery = int(self.payload["battery"])
+
 
     def do_cmd_action(self):
         pass
@@ -58,18 +68,26 @@ class Device:
 class RemoteControler(Device):
 
     def do_action(self):
+        super().do_action()
         try:
             if self.payload["action"] == "toggle":
                 self.client.publish("Test/Outlet", "power")
 
             elif self.payload["action"] == "brightness_up_click":
-                self.client.publish("Test/Outlet", "up")
+                for device in self.sub_devices:
+                    if type(device) is PowerOutlet:
+                        device.turn_on()
 
             elif self.payload["action"] == "brightness_down_click":
-                self.client.publish("Test/Outlet", "down")
+                for device in self.sub_devices:
+                    if type(device) is PowerOutlet:
+                        device.turn_off()
 
             elif self.payload["action"] == "arrow_left_click":
-                self.client.publish("Test/Outlet", "left")
+                for device in self.sub_devices:
+                    if type(device) is PowerOutlet:
+                        device.payload["action"] = "restart"
+                        device.do_cmd_action()
 
             elif self.payload["action"] == "arrow_right_click":
                 self.client.publish("Test/Outlet", "right")
@@ -78,16 +96,15 @@ class RemoteControler(Device):
                 pass
 
         except KeyError:
-            logger.debug("Exception in action {}".format(self.name))
+            logger.debug("Action not found in payload {}".format(self.name))
         except Exception as inst:
             logger.exception("Exception in action {}".format(self.name))
-
 
 # wifi router power off
 class PowerOutlet(Device):
     def on_init(self, **kwargs):
         schedule.every().day.at("03:00").do(self.turn_off)
-        schedule.every().day.at("05:50").do(self.turn_on)
+        schedule.every().day.at("06:30").do(self.turn_on)
         # schedule.every(10).seconds.do(self.turn_off)
         # schedule.every(10).seconds.do(self.turn_on)
         schedule.run_continuously()
@@ -96,7 +113,6 @@ class PowerOutlet(Device):
         try:
             if self.payload["action"] == "restart":
                 self.restart()
-                self.client.email.send_mail(self.cmd_topic, '{"response":"Restart completed"}')
             else:
                 pass
         except KeyError:
@@ -106,16 +122,30 @@ class PowerOutlet(Device):
 
     def turn_off(self):
         logger.info("Turning off: " + datetime.now().strftime("%H:%M:%S"))
-        self.client.publish(self.state_topic + "/set", "OFF")
+        message_info = self.client.publish(self.state_topic + "/set", "OFF", qos=1, retain=True)
+        logger.debug(message_info)
 
     def turn_on(self):
         logger.info("Turning on: " + datetime.now().strftime("%H:%M:%S"))
-        self.client.publish(self.state_topic + "/set", "ON")
+        message_info = self.client.publish(self.state_topic + "/set", "ON", qos=1, retain=True)
+        logger.debug(message_info)
+
+    def turn_on_wait(self, seconds=60):
+        time.sleep(seconds)
+        self.turn_on()
+        logger.info("Thread turn on triggered.")
+        report = threading.Thread(target=self.send_report, args=(60,))
+        report.start()
+
+    def send_report(self, seconds=0):
+        time.sleep(seconds)
+        self.client.email.send_mail(self.cmd_topic, '{"response":"Restart completed"}')
 
     def restart(self):
+        logger.info("Restart triggered.")
         self.turn_off()
-        time.sleep(60)
-        self.turn_on()
+        on = threading.Thread(target=self.turn_on_wait, args=())
+        on.start()
 
 
 # Light bulb
@@ -125,13 +155,8 @@ class LighBulb(Device):
 
 # motionsensor hall
 class MotionSensorHall(Device):
-    sub_devices: List[Device]
 
     def __init__(self, name, client: mqtt.Client, **kwargs):
-        self.sub_devices = []
-        if "sub_devices" in kwargs:
-            self.sub_devices = kwargs["sub_devices"]
-
         self.last_motion = datetime.fromtimestamp(0)
 
         super().__init__(name, client, **kwargs)
@@ -140,6 +165,8 @@ class MotionSensorHall(Device):
         pass
 
     def do_action(self):
+        super().do_action()
+
         try:
             if not self.sub_devices:  # no devices
                 return

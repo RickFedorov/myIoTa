@@ -3,6 +3,7 @@ import paho.mqtt.client as mqtt
 from device import Device, RemoteControler, PowerOutlet, LighBulb, MotionSensorHall
 from connect import Email2Mqtt, Mqtt2Email
 
+import logging
 from logs.logger import get_my_logger
 logger = get_my_logger(__name__)
 
@@ -38,11 +39,15 @@ class IOTA(mqtt.Client):
         logger.debug("Sub: " + str(mid) + " " + str(granted_qos))
 
     def on_log(self, mqttc, obj, level, string):
-        logger.debug("Log: " + string)
+        if level in (logging.DEBUG, logging.ERROR, logging.INFO, logging.WARNING):
+            logger.log(level, string)
+
 
     def init_devices(self):
-        self.devices.append(RemoteControler("remote_control1", self))
-        self.devices.append(PowerOutlet("control_outlet1", self))
+        power_outlet = PowerOutlet("control_outlet1", self)
+
+        self.devices.append(power_outlet)
+        self.devices.append(RemoteControler("remote_control1", self, sub_devices=[power_outlet]))
 
         light_group_hall = []
         light_group_hall.append(LighBulb("light_bulb1", self))
@@ -50,7 +55,8 @@ class IOTA(mqtt.Client):
 
         self.devices = self.devices + light_group_hall
 
-        self.devices.append(MotionSensorHall("motion_sensor_hall",self, sub_devices=light_group_hall))
+        self.devices.append(MotionSensorHall("motion_sensor_hall", self, sub_devices=light_group_hall))
+        pass
 
     def init_email(self):
         x = threading.Thread(target=self.email_monitor.run, args=(2,))
